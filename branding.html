@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Does Your Brand Need? | Future Mind Studio Branding Discovery</title>
+  <meta name="description" content="Discover what branding materials your business actually needs. An interactive client-guided branding consultation by Future Mind Studio.">
+  <meta name="theme-color" content="#0B1E4D">
+
+  <link rel="canonical" href="https://futuremindstudio.com/branding.html">
+  <link rel="icon" type="image/png" href="assets/logo-favicon.png">
+
+  <!-- Core Stylesheet from Index & Branding Extensions -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="branding.css">
+</head>
+<body>
+
+  <!-- Custom Tracking Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="app-container branding-container">
+
+    <!-- SHARED GLOBAL HEADER & NAVIGATION -->
+    <div id="site-header-container"></div>
+    <script src="header.js"></script>
+
+    <!-- ==========================================================================
+         03. HERO SECTION — "WHAT DOES YOUR BRAND NEED?"
+         ========================================================================== -->
+    <main class="branding-hero" id="hero">
+      <div class="hero-editorial-grid"></div>
+
+      <!-- Floating 3D Accent Assets from Core Design System -->
+      <img src="assets/glass_cube.png" class="floating-asset asset-glass-cube" style="top:12%; left:4%; width:70px; opacity:0.75;" alt="Glass Crystal Accent">
+      <img src="assets/yellow_cube.png" class="floating-asset asset-yellow-cube" style="bottom:15%; right:6%; width:64px; opacity:0.85;" alt="Yellow Cube Accent">
+
+      <!-- Center Hero Copy -->
+      <div class="branding-hero-center">
+        <div class="editorial-badge">
+          <span class="dot"></span>
+          <span>Interactive Brand Consultation</span>
+        </div>
+        
+        <h1 class="branding-hero-h1">
+          WHAT<br>
+          DOES YOUR<br>
+          <span class="highlight-word">BRAND</span> NEED?
+        </h1>
+
+        <p class="branding-hero-desc">
+          Build only what your business needs — from identity and packaging to catalogs and digital presence.
+        </p>
+
+        <div class="branding-hero-actions">
+          <a href="#where-are-you" class="btn-primary" id="btnDiscoverNeeds">
+            DISCOVER YOUR BRAND NEEDS
+            <svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
+          </a>
+          <a href="#brand-journey" class="btn-secondary-outline" id="btnViewApproach">
+            VIEW OUR APPROACH
+            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Floating Branding Objects around typography -->
+      <div class="floating-objects-layer">
+        <!-- 01: Logo Mark -->
+        <div class="hero-mock-object obj-logo-mark hover-draggable" title="Monogram Identity Mark">
+          <div class="mock-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10m-5-5h10"></path></svg>
+          </div>
+          <div class="mock-text">
+            <span class="mock-label">01 / Foundation</span>
+            <span class="mock-title">Logo Mark</span>
+          </div>
+        </div>
+
+        <!-- 02: Business Card -->
+        <div class="hero-mock-object obj-business-card hover-draggable" title="Matte Studio Business Card">
+          <div class="mock-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="6" y1="10" x2="12" y2="10"></line><line x1="6" y1="14" x2="9" y2="14"></line></svg>
+          </div>
+          <div class="mock-text">
+            <span class="mock-label">02 / Collateral</span>
+            <span class="mock-title">Business Card</span>
+          </div>
+        </div>
+
+        <!-- 03: Product Tag -->
+        <div class="hero-mock-object obj-product-tag hover-draggable" title="Die-Cut Garment Hang Tag">
+          <div class="mock-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8 8a2 2 0 0 0 2.828 0l7.172-7.172a2 2 0 0 0 0-2.828l-8-8z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>
+          </div>
+          <div class="mock-text">
+            <span class="mock-label">03 / Apparel</span>
+            <span class="mock-title">Product Tag</span>
+          </div>
+        </div>
+
+        <!-- 04: Packaging -->
+        <div class="hero-mock-object obj-packaging hover-draggable" title="Rigid Luxury Packaging Box">
+          <div class="mock-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <div class="mock-text">
+            <span class="mock-label">04 / Physical</span>
+            <span class="mock-title">Packaging</span>
+          </div>
+        </div>
+
+        <!-- 05: Catalog Page -->
+        <div class="hero-mock-object obj-catalog hover-draggable" title="Wholesale Lookbook / Catalog Spread">
+          <div class="mock-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div class="mock-text">
+            <span class="mock-label">05 / Showcase</span>
+            <span class="mock-title">Product Catalog</span>
+          </div>
+        </div>
+
+        <!-- 06: Swatch Card -->
+        <div class="hero-mock-object obj-swatch hover-draggable" title="Textile / Material Swatch Card">
+          <div class="mock-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          </div>
+          <div class="mock-text">
+            <span class="mock-label">06 / Materials</span>
+            <span class="mock-title">Swatch Card</span>
+          </div>
+        </div>
+
+        <!-- 07: Website Screen -->
+        <div class="hero-mock-object obj-website hover-draggable" title="Responsive Studio Viewport">
+          <div class="mock-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="2" y1="7" x2="22" y2="7"></line><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <div class="mock-text">
+            <span class="mock-label">07 / Digital</span>
+            <span class="mock-title">Website Screen</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ==========================================================================
+         04. SECTION — WHERE ARE YOU NOW?
+         ========================================================================== -->
+    <section class="branding-section" id="where-are-you">
+      <div class="branding-section-header text-center">
+        <div class="editorial-badge">
+          <span class="dot"></span>
+          <span>01 / Starting Point</span>
+        </div>
+        <h2 class="branding-title">
+          WHERE IS YOUR BUSINESS <span class="cursive-accent">RIGHT NOW?</span>
+        </h2>
+        <p class="branding-subtitle">
+          Start from where you are. We'll help you identify what comes next without unnecessary overhead or vanity pieces.
+        </p>
+      </div>
+
+      <div class="where-cards-grid">
+        <!-- 01 — I'M STARTING -->
+        <div class="where-card active" data-stage="starting">
+          <div class="where-card-top">
+            <div class="where-number">01 — I'M STARTING</div>
+            <h3>New Venture & Genesis</h3>
+            <p class="where-quote">
+              "I have a business idea or new business, but my brand isn't established yet."
+            </p>
+          </div>
+          <div class="where-recommended">
+            <div class="where-rec-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Recommended Foundation:
+            </div>
+            <div class="where-pieces-list">
+              <span class="piece-tag">Logo Design</span>
+              <span class="piece-tag">Business Card</span>
+              <span class="piece-tag">Letterhead</span>
+              <span class="piece-tag">Company Profile</span>
+              <span class="piece-tag">Custom Website</span>
+            </div>
+            <div class="where-card-action">
+              <button class="btn-select-stage" aria-label="Load starting pack">
+                Load into Configurator
+                <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 — I HAVE A BRAND -->
+        <div class="where-card" data-stage="brand">
+          <div class="where-card-top">
+            <div class="where-number">02 — I HAVE A BRAND</div>
+            <h3>Consistency & Elevation</h3>
+            <p class="where-quote">
+              "I already have a logo, but my other materials don't feel consistent."
+            </p>
+          </div>
+          <div class="where-recommended">
+            <div class="where-rec-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Recommended Alignment:
+            </div>
+            <div class="where-pieces-list">
+              <span class="piece-tag">Brand Consistency</span>
+              <span class="piece-tag">Business Materials</span>
+              <span class="piece-tag">Company Profile</span>
+              <span class="piece-tag">Product Catalog</span>
+              <span class="piece-tag">Website Refresh</span>
+            </div>
+            <div class="where-card-action">
+              <button class="btn-select-stage" aria-label="Load brand consistency pack">
+                Load into Configurator
+                <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 — I HAVE PRODUCTS -->
+        <div class="where-card" data-stage="products">
+          <div class="where-card-top">
+            <div class="where-number">03 — I HAVE PRODUCTS</div>
+            <h3>Tangible Presentation</h3>
+            <p class="where-quote">
+              "My products are ready, but the presentation doesn't feel professional."
+            </p>
+          </div>
+          <div class="where-recommended">
+            <div class="where-rec-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Recommended Tangibles:
+            </div>
+            <div class="where-pieces-list">
+              <span class="piece-tag">Packaging Design</span>
+              <span class="piece-tag">Product Tags</span>
+              <span class="piece-tag">Swatch Cards</span>
+              <span class="piece-tag">Product Catalog</span>
+              <span class="piece-tag">Showcase Website</span>
+            </div>
+            <div class="where-card-action">
+              <button class="btn-select-stage" aria-label="Load product presentation pack">
+                Load into Configurator
+                <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 — I'M GROWING -->
+        <div class="where-card" data-stage="growing">
+          <div class="where-card-top">
+            <div class="where-number">04 — I'M GROWING</div>
+            <h3>Scale & Enterprise Presence</h3>
+            <p class="where-quote">
+              "My business is established and I need a stronger professional presence."
+            </p>
+          </div>
+          <div class="where-recommended">
+            <div class="where-rec-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Recommended Scale Stack:
+            </div>
+            <div class="where-pieces-list">
+              <span class="piece-tag">Company Profile</span>
+              <span class="piece-tag">Product Catalog</span>
+              <span class="piece-tag">Packaging System</span>
+              <span class="piece-tag">Flex Banner</span>
+              <span class="piece-tag">Digital Flagship</span>
+            </div>
+            <div class="where-card-action">
+              <button class="btn-select-stage" aria-label="Load scale presence pack">
+                Load into Configurator
+                <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05. SECTION — WHAT ARE YOU TRYING TO ACHIEVE?
+         ========================================================================== -->
+    <section class="branding-section" id="goals">
+      <div class="branding-section-header text-center">
+        <div class="editorial-badge">
+          <span class="dot"></span>
+          <span>02 / Strategic Objectives</span>
+        </div>
+        <h2 class="branding-title">
+          WHAT DO YOU WANT YOUR BRAND <span class="cursive-accent">TO DO?</span>
+        </h2>
+        <p class="branding-subtitle">
+          Select what you want to accomplish right now. We'll map the exact branding materials needed to hit that outcome.
+        </p>
+      </div>
+
+      <div class="achieve-goals-container">
+        <!-- Interactive Pill Selectors -->
+        <div class="achieve-pills-wrap">
+          <div class="achieve-pill-group" id="achievePillGroup">
+            <button class="goal-pill" data-goal="look-professional">LOOK PROFESSIONAL</button>
+            <button class="goal-pill" data-goal="launch-brand">LAUNCH A BRAND</button>
+            <button class="goal-pill" data-goal="sell-product">SELL A PRODUCT</button>
+            <button class="goal-pill" data-goal="present-company">PRESENT MY COMPANY</button>
+            <button class="goal-pill active" data-goal="enter-wholesale">ENTER WHOLESALE</button>
+            <button class="goal-pill" data-goal="go-digital">GO DIGITAL</button>
+          </div>
+          <div class="mobile-swipe-hint">
+            <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <span>Swipe to select objective</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Reveal Box -->
+        <div class="achieve-reveal-box">
+          <div class="achieve-box-inner">
+            <div class="achieve-content-left">
+              <span class="achieve-tag" id="achieveTag">Goal / B2B & Wholesale Distribution</span>
+              <h3 id="achieveTitle">ENTER WHOLESALE</h3>
+              <p class="achieve-desc" id="achieveDesc">
+                Wholesale buyers need more than a logo. Your brand needs a clear system for presenting your company, products and collections with absolute commercial clarity.
+              </p>
+              <button class="btn-primary" id="btnApplyGoal">
+                Apply to My Brand System
+                <svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
+              </button>
+            </div>
+
+            <div class="achieve-stack-box">
+              <div class="achieve-stack-title">Required Brand Materials</div>
+              <div class="achieve-items-flow" id="achieveFlow">
+                <div class="flow-item"><div class="item-badge">Company Profile</div></div>
+                <div class="flow-item"><span class="plus-sym">+</span><div class="item-badge">Product Catalog</div></div>
+                <div class="flow-item"><span class="plus-sym">+</span><div class="item-badge">Swatch Card</div></div>
+                <div class="flow-item"><span class="plus-sym">+</span><div class="item-badge">Product Tags</div></div>
+                <div class="flow-item"><span class="plus-sym">+</span><div class="item-badge">Custom Website</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         06. SECTION — YOUR BRAND JOURNEY (LAYERS)
+         ========================================================================== -->
+    <section class="branding-section" id="brand-journey">
+      <div class="branding-section-header text-center">
+        <div class="editorial-badge">
+          <span class="dot"></span>
+          <span>03 / The Blueprint</span>
+        </div>
+        <h2 class="branding-title">
+          A BRAND IS BUILT <span class="cursive-accent">IN LAYERS.</span>
+        </h2>
+        <p class="branding-subtitle">
+          Great brands are not designed as disjointed items. Each layer builds upon the prior, creating compounding credibility as your business expands.
+        </p>
+      </div>
+
+      <div class="layers-journey-timeline">
+        <!-- STAGE 01 -->
+        <div class="layer-step-card">
+          <div class="layer-marker">
+            <span>01</span>
+            <span class="layer-tag-label">Base</span>
+          </div>
+          <div class="layer-info">
+            <h3>IDENTITY</h3>
+            <p class="layer-question">"Who are you?"</p>
+          </div>
+          <div class="layer-materials">
+            <span class="layer-material-pill">Logo Design</span>
+            <span class="layer-material-pill">Business Card</span>
+            <span class="layer-material-pill">Letterhead</span>
+          </div>
+        </div>
+
+        <!-- STAGE 02 -->
+        <div class="layer-step-card">
+          <div class="layer-marker">
+            <span>02</span>
+            <span class="layer-tag-label">Trust</span>
+          </div>
+          <div class="layer-info">
+            <h3>BUSINESS</h3>
+            <p class="layer-question">"How do you present your company?"</p>
+          </div>
+          <div class="layer-materials">
+            <span class="layer-material-pill">Company Profile</span>
+          </div>
+        </div>
+
+        <!-- STAGE 03 -->
+        <div class="layer-step-card">
+          <div class="layer-marker">
+            <span>03</span>
+            <span class="layer-tag-label">Touch</span>
+          </div>
+          <div class="layer-info">
+            <h3>PRODUCT</h3>
+            <p class="layer-question">"How does your product represent your brand?"</p>
+          </div>
+          <div class="layer-materials">
+            <span class="layer-material-pill">Packaging</span>
+            <span class="layer-material-pill">Tags</span>
+            <span class="layer-material-pill">Swatch Card</span>
+          </div>
+        </div>
+
+        <!-- STAGE 04 -->
+        <div class="layer-step-card">
+          <div class="layer-marker">
+            <span>04</span>
+            <span class="layer-tag-label">Reach</span>
+          </div>
+          <div class="layer-info">
+            <h3>MARKET</h3>
+            <p class="layer-question">"How do customers discover you?"</p>
+          </div>
+          <div class="layer-materials">
+            <span class="layer-material-pill">Product Catalog</span>
+            <span class="layer-material-pill">Flex Banner</span>
+          </div>
+        </div>
+
+        <!-- STAGE 05 -->
+        <div class="layer-step-card">
+          <div class="layer-marker">
+            <span>05</span>
+            <span class="layer-tag-label">Digital</span>
+          </div>
+          <div class="layer-info">
+            <h3>DIGITAL</h3>
+            <p class="layer-question">"Where does your brand live online?"</p>
+          </div>
+          <div class="layer-materials">
+            <span class="layer-material-pill">Custom Website</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         07. SECTION — DO YOU REALLY NEED IT? (Educational Consultation)
+         ========================================================================== -->
+    <section class="branding-section" id="do-you-need-it">
+      <div class="branding-section-header text-center">
+        <div class="editorial-badge">
+          <span class="dot"></span>
+          <span>04 / Honest Consultation</span>
+        </div>
+        <h2 class="branding-title">
+          NOT EVERY BUSINESS <span class="cursive-accent">NEEDS EVERYTHING.</span>
+        </h2>
+        <p class="branding-subtitle">
+          The right branding depends on what you sell, who you sell to and how customers interact with your business. Here is when each piece becomes truly essential.
+        </p>
+      </div>
+
+      <div class="need-grid">
+        <!-- LOGO -->
+        <div class="need-card">
+          <div>
+            <div class="need-card-header">
+              <h3>LOGO</h3>
+              <div class="need-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v8m-4-4h8"></path></svg>
+              </div>
+            </div>
+            <div class="need-criteria">
+              <span class="need-criteria-label">You need this if...</span>
+              <p>You're starting a business or your existing identity isn't clear, memorable, or consistent across media.</p>
+            </div>
+          </div>
+          <div class="need-card-footer">
+            <button class="btn-add-system-quick" data-item="logo">
+              <span>+ Add to System</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- COMPANY PROFILE -->
+        <div class="need-card">
+          <div>
+            <div class="need-card-header">
+              <h3>COMPANY PROFILE</h3>
+              <div class="need-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              </div>
+            </div>
+            <div class="need-criteria">
+              <span class="need-criteria-label">You need this if...</span>
+              <p>You deal with B2B customers, institutional buyers, suppliers, distributors or corporate procurement teams.</p>
+            </div>
+          </div>
+          <div class="need-card-footer">
+            <button class="btn-add-system-quick" data-item="profile">
+              <span>+ Add to System</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT CATALOG -->
+        <div class="need-card">
+          <div>
+            <div class="need-card-header">
+              <h3>PRODUCT CATALOG</h3>
+              <div class="need-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+            </div>
+            <div class="need-criteria">
+              <span class="need-criteria-label">You need this if...</span>
+              <p>You have multiple products, SKUs, or seasonal collections that customers need to browse structured by specifications.</p>
+            </div>
+          </div>
+          <div class="need-card-footer">
+            <button class="btn-add-system-quick" data-item="catalog">
+              <span>+ Add to System</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PACKAGING -->
+        <div class="need-card">
+          <div>
+            <div class="need-card-header">
+              <h3>PACKAGING</h3>
+              <div class="need-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+              </div>
+            </div>
+            <div class="need-criteria">
+              <span class="need-criteria-label">You need this if...</span>
+              <p>Your product reaches the customer's hands and unboxing presentation is part of the premium value experience.</p>
+            </div>
+          </div>
+          <div class="need-card-footer">
+            <button class="btn-add-system-quick" data-item="packaging">
+              <span>+ Add to System</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- SWATCH CARD -->
+        <div class="need-card">
+          <div>
+            <div class="need-card-header">
+              <h3>SWATCH CARD</h3>
+              <div class="need-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </div>
+            </div>
+            <div class="need-criteria">
+              <span class="need-criteria-label">You need this if...</span>
+              <p>Customers choose fabrics, colors, tactile textures, materials or finishes prior to placing wholesale orders.</p>
+            </div>
+          </div>
+          <div class="need-card-footer">
+            <button class="btn-add-system-quick" data-item="swatch">
+              <span>+ Add to System</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- TAG -->
+        <div class="need-card">
+          <div>
+            <div class="need-card-header">
+              <h3>TAG</h3>
+              <div class="need-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8 8a2 2 0 0 0 2.828 0l7.172-7.172a2 2 0 0 0 0-2.828l-8-8z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>
+              </div>
+            </div>
+            <div class="need-criteria">
+              <span class="need-criteria-label">You need this if...</span>
+              <p>Your products need physical brand identification, barcode tags, wash care details, and price verification.</p>
+            </div>
+          </div>
+          <div class="need-card-footer">
+            <button class="btn-add-system-quick" data-item="tag">
+              <span>+ Add to System</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- FLEX BANNER -->
+        <div class="need-card">
+          <div>
+            <div class="need-card-header">
+              <h3>FLEX BANNER</h3>
+              <div class="need-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"></rect><line x1="12" y1="16" x2="12" y2="20"></line><line x1="8" y1="20" x2="16" y2="20"></line></svg>
+              </div>
+            </div>
+            <div class="need-criteria">
+              <span class="need-criteria-label">You need this if...</span>
+              <p>Your business needs physical visibility in trade shows, showrooms, retail storefronts, or promotional expos.</p>
+            </div>
+          </div>
+          <div class="need-card-footer">
+            <button class="btn-add-system-quick" data-item="banner">
+              <span>+ Add to System</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- WEBSITE -->
+        <div class="need-card">
+          <div>
+            <div class="need-card-header">
+              <h3>WEBSITE</h3>
+              <div class="need-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+            </div>
+            <div class="need-criteria">
+              <span class="need-criteria-label">You need this if...</span>
+              <p>Customers need to discover your business, inspect your verified credentials, or contact you directly online 24/7.</p>
+            </div>
+          </div>
+          <div class="need-card-footer">
+            <button class="btn-add-system-quick" data-item="website">
+              <span>+ Add to System</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         08. SECTION — FIND YOUR BUSINESS TYPE
+         ========================================================================== -->
+    <section class="branding-section" id="business-types">
+      <div class="branding-section-header text-center">
+        <div class="editorial-badge">
+          <span class="dot"></span>
+          <span>05 / Industry Tailored</span>
+        </div>
+        <h2 class="branding-title">
+          WHICH ONE SOUNDS LIKE <span class="cursive-accent">YOUR BUSINESS?</span>
+        </h2>
+        <p class="branding-subtitle">
+          Different industries demand completely different touchpoints. Select your sector below to see the battle-tested roadmap.
+        </p>
+      </div>
+
+      <!-- Business Type Navigation -->
+      <div class="business-types-nav-wrap">
+        <div class="business-types-nav" id="bizTypesNav">
+          <button class="btn-biz-type active" data-biz="textile">TEXTILE / GARMENT</button>
+          <button class="btn-biz-type" data-biz="fashion">FASHION BRAND</button>
+          <button class="btn-biz-type" data-biz="manufacturer">MANUFACTURER</button>
+          <button class="btn-biz-type" data-biz="retail">RETAIL BUSINESS</button>
+          <button class="btn-biz-type" data-biz="startup">STARTUP</button>
+        </div>
+        <div class="mobile-swipe-hint">
+          <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <span>Swipe to explore industries</span>
+        </div>
+      </div>
+
+      <!-- Dynamic Path Display Card -->
+      <div class="biz-path-display-card">
+        <div class="biz-path-title-wrap">
+          <div>
+            <h3 id="bizPathTitle">Textile & Garment Business</h3>
+            <p id="bizPathDesc">Essential stack for fabric manufacturers, mills, and garment suppliers to present collections and textures.</p>
+          </div>
+          <button class="btn-primary" id="btnSyncBizPath">
+            Sync to Builder
+            <svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
+          </button>
+        </div>
+
+        <div class="biz-path-flow" id="bizPathFlow">
+          <div class="path-step-pill"><span class="step-dot"></span><span>Logo</span></div>
+          <div class="path-arrow"><svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+          <div class="path-step-pill"><span class="step-dot"></span><span>Company Profile</span></div>
+          <div class="path-arrow"><svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+          <div class="path-step-pill"><span class="step-dot"></span><span>Product Catalog</span></div>
+          <div class="path-arrow"><svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+          <div class="path-step-pill"><span class="step-dot"></span><span>Swatch Card</span></div>
+          <div class="path-arrow"><svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+          <div class="path-step-pill"><span class="step-dot"></span><span>Tags</span></div>
+          <div class="path-arrow"><svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+          <div class="path-step-pill"><span class="step-dot"></span><span>Website</span></div>
+        </div>
+
+        <div class="biz-path-footer">
+          <p id="bizPathNote">
+            Wholesale buyers need tactile sample swatches and clear garment tags alongside a technical company profile.
+          </p>
+          <span style="font-size:12px; font-weight:700; color:var(--accent-orange); text-transform:uppercase; letter-spacing:1px;">
+            Optimized for High-Volume Inquiries
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         09. SECTION — YOUR BRAND'S MISSING PIECES (Visual Comparison)
+         ========================================================================== -->
+    <section class="branding-section" id="comparison">
+      <div class="branding-section-header text-center">
+        <div class="editorial-badge">
+          <span class="dot"></span>
+          <span>06 / System vs Chaos</span>
+        </div>
+        <h2 class="branding-title">
+          YOUR BRAND MAY <span class="cursive-accent">ALREADY EXIST.</span>
+        </h2>
+        <p class="branding-subtitle">
+          You don't always need to start again. Sometimes you simply need to connect the pieces into one harmonious voice.
+        </p>
+      </div>
+
+      <div class="comparison-container">
+        <!-- LEFT: WITHOUT A SYSTEM -->
+        <div class="comparison-side side-without-system">
+          <div class="side-header">
+            <span class="status-tag">Fragmented Identity</span>
+            <h3>WITHOUT A SYSTEM</h3>
+          </div>
+
+          <div class="comparison-items">
+            <div class="comp-item item-disjointed-1">
+              <span>Logo Design</span>
+              <span style="font-size:11px;">Mismatched Font</span>
+            </div>
+            <div class="comp-item item-disjointed-2">
+              <span>Business Card</span>
+              <span style="font-size:11px;">Clashing Colors</span>
+            </div>
+            <div class="comp-item item-disjointed-3">
+              <span>Product Catalog</span>
+              <span style="font-size:11px;">Inconsistent Grid</span>
+            </div>
+            <div class="comp-item item-disjointed-4">
+              <span>Packaging</span>
+              <span style="font-size:11px;">Unrelated Tone</span>
+            </div>
+            <div class="comp-item item-disjointed-5">
+              <span>Website</span>
+              <span style="font-size:11px;">Standard Template</span>
+            </div>
+          </div>
+
+          <p style="font-size:13px; color:#85756a; line-height:1.5;">
+            Each piece was designed independently by different vendors with zero shared rules, creating customer confusion and eroding trust.
+          </p>
+        </div>
+
+        <!-- RIGHT: CONNECTED BRAND -->
+        <div class="comparison-side side-connected-brand">
+          <div class="side-header">
+            <span class="status-tag">Future Mind Logic</span>
+            <h3>CONNECTED BRAND</h3>
+          </div>
+
+          <div class="comparison-items">
+            <div class="comp-item">
+              <span>Logo</span>
+              <span class="brand-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Core Signature
+              </span>
+            </div>
+            <div class="comp-item">
+              <span>Business Card</span>
+              <span class="brand-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Unified Geometry
+              </span>
+            </div>
+            <div class="comp-item">
+              <span>Catalog</span>
+              <span class="brand-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Editorial Spacing
+              </span>
+            </div>
+            <div class="comp-item">
+              <span>Packaging</span>
+              <span class="brand-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tactile Luxury
+              </span>
+            </div>
+            <div class="comp-item">
+              <span>Website</span>
+              <span class="brand-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Fluid Interaction
+              </span>
+            </div>
+          </div>
+
+          <div class="connected-traits">
+            <div class="trait-item">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Same Typography</span>
+            </div>
+            <div class="trait-item">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Shared Color Logic</span>
+            </div>
+            <div class="trait-item">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Visual Language</span>
+            </div>
+            <div class="trait-item">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Brand Personality</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main statement -->
+      <div class="comparison-banner-statement">
+        <h4>Consistency turns individual designs into a <span>brand.</span></h4>
+        <p>When every touchpoint sings in harmony, your perceived authority multiples instantly.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. SECTION — ONE BRAND. EVERY TOUCHPOINT. (Signature Constellation)
+         ========================================================================== -->
+    <section class="branding-section" id="touchpoints">
+      <div class="touchpoints-stage">
+        <div class="touchpoints-intro">
+          <div class="editorial-badge">
+            <span class="dot"></span>
+            <span>07 / The Ecosystem</span>
+          </div>
+          <h2>
+            ONE BRAND.<br>
+            <span>EVERY TOUCHPOINT.</span>
+          </h2>
+          <p>
+            We don't create ten separate designs. We create one identity that works everywhere your customers experience your business.
+          </p>
+        </div>
+
+        <div class="constellation-wrapper">
+          <!-- Dynamic SVG Network Canvas -->
+          <svg id="touchpointSvgNetwork"></svg>
+
+          <!-- Central Brand Core -->
+          <div class="constellation-center" id="constellationCenter" title="Future Mind Studio Central Identity Core">
+            <div class="core-brand-name">FUTURE MIND</div>
+            <div class="core-subtext">CORE SYSTEM</div>
+          </div>
+
+          <!-- 10 Connected Orbiting Satellite Nodes -->
+          <div class="touchpoint-node" id="nodeLogo"><span class="node-dot"></span>LOGO</div>
+          <div class="touchpoint-node" id="nodeCard"><span class="node-dot"></span>BUSINESS CARD</div>
+          <div class="touchpoint-node" id="nodeLetterhead"><span class="node-dot"></span>LETTERHEAD</div>
+          <div class="touchpoint-node" id="nodeProfile"><span class="node-dot"></span>COMPANY PROFILE</div>
+          <div class="touchpoint-node" id="nodePackaging"><span class="node-dot"></span>PACKAGING</div>
+          <div class="touchpoint-node" id="nodeCatalog"><span class="node-dot"></span>PRODUCT CATALOG</div>
+          <div class="touchpoint-node" id="nodeBanner"><span class="node-dot"></span>FLEX BANNER</div>
+          <div class="touchpoint-node" id="nodeSwatch"><span class="node-dot"></span>SWATCH CARD</div>
+          <div class="touchpoint-node" id="nodeTag"><span class="node-dot"></span>TAG</div>
+          <div class="touchpoint-node" id="nodeWebsite"><span class="node-dot"></span>WEBSITE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. SECTION — OUR ACTUAL BRANDING SERVICES (Catalog)
+         ========================================================================== -->
+    <section class="branding-section" id="services-catalog">
+      <div class="branding-section-header text-center">
+        <div class="editorial-badge">
+          <span class="dot"></span>
+          <span>08 / Studio Directory</span>
+        </div>
+        <h2 class="branding-title">
+          OUR ACTUAL <span class="cursive-accent">BRANDING SERVICES</span>
+        </h2>
+        <p class="branding-subtitle">
+          Grouped into four strategic categories. Every service is engineered to connect seamlessly into your broader brand system.
+        </p>
+      </div>
+
+      <div class="services-catalog-grid">
+        <!-- 01: IDENTITY -->
+        <div class="catalog-column">
+          <div class="catalog-col-header">
+            <div class="catalog-pillar-id">PILLAR 01</div>
+            <h3>IDENTITY</h3>
+          </div>
+          <div class="catalog-items-list">
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Logo Design</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">Custom monogram marks, typography rules, primary and responsive secondary lockups.</p>
+            </div>
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Business Card</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">Premium tactile specifications, edge-foil details, and executive layout formatting.</p>
+            </div>
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Letterhead</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">Corporate stationery systems, formal letterheads, and digital invoice templates.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02: BUSINESS -->
+        <div class="catalog-column">
+          <div class="catalog-col-header">
+            <div class="catalog-pillar-id">PILLAR 02</div>
+            <h3>BUSINESS</h3>
+          </div>
+          <div class="catalog-items-list">
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Company Profile</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">Executive pitch deck, capacity details, machinery specs, and investor credentials.</p>
+            </div>
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Product Catalog</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">B2B wholesale lookbooks, organized product grids, codes, and seasonal portfolios.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03: PRODUCT -->
+        <div class="catalog-column">
+          <div class="catalog-col-header">
+            <div class="catalog-pillar-id">PILLAR 03</div>
+            <h3>PRODUCT</h3>
+          </div>
+          <div class="catalog-items-list">
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Packaging Design</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">Custom box die-lines, structural concepts, pouches, and luxury unboxing finishes.</p>
+            </div>
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Swatch Card</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">Fabric and finish sample presentation cards engineered for tactile buyers.</p>
+            </div>
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Tag</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">Garment hang tags, woven labels, security barcodes, and care instructions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04: PRESENCE -->
+        <div class="catalog-column">
+          <div class="catalog-col-header">
+            <div class="catalog-pillar-id">PILLAR 04</div>
+            <h3>PRESENCE</h3>
+          </div>
+          <div class="catalog-items-list">
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Flex Banner Design</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">High-resolution physical event displays, showroom signage, and outdoor visibility.</p>
+            </div>
+            <div class="catalog-item-row">
+              <div class="catalog-item-title">
+                <span>Website Design</span>
+                <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:var(--accent-orange); fill:none;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <p class="catalog-item-desc">Custom responsive digital flagship featuring smooth physics, high speed, and conversions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         12. SECTION — BUILD YOUR BRAND SYSTEM (Interactive Configurator)
+         ========================================================================== -->
+    <section class="branding-section" id="configurator">
+      <div class="branding-section-header text-center">
+        <div class="editorial-badge">
+          <span class="dot"></span>
+          <span>09 / Interactive Configurator</span>
+        </div>
+        <h2 class="branding-title">
+          BUILD YOUR <span class="cursive-accent">BRAND SYSTEM.</span>
+        </h2>
+        <p class="branding-subtitle">
+          Select what your business currently needs. We'll assemble a cohesive, non-bloated brand proposal without unnecessary costs.
+        </p>
+      </div>
+
+      <div class="configurator-wrapper">
+        <!-- Left Checklist Area -->
+        <div class="config-options-section">
+          <h3>Select Branding Materials</h3>
+          
+          <div class="configurator-checklist">
+            <!-- 01: Logo -->
+            <div class="config-item-card selected" data-item="logo">
+              <div class="custom-checkbox">
+                <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="config-item-info">
+                <h4>Logo Design</h4>
+                <p>Primary mark, color system & type guidelines</p>
+              </div>
+            </div>
+
+            <!-- 02: Business Card -->
+            <div class="config-item-card selected" data-item="business-card">
+              <div class="custom-checkbox">
+                <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="config-item-info">
+                <h4>Business Card & Letterhead</h4>
+                <p>Tactile stationery & corporate communication</p>
+              </div>
+            </div>
+
+            <!-- 03: Company Profile -->
+            <div class="config-item-card selected" data-item="profile">
+              <div class="custom-checkbox">
+                <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="config-item-info">
+                <h4>Company Profile</h4>
+                <p>Executive pitch deck & capacity credentials</p>
+              </div>
+            </div>
+
+            <!-- 04: Product Catalog -->
+            <div class="config-item-card selected" data-item="catalog">
+              <div class="custom-checkbox">
+                <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="config-item-info">
+                <h4>Product Catalog</h4>
+                <p>Structured B2B lookbook & collection guide</p>
+              </div>
+            </div>
+
+            <!-- 05: Packaging -->
+            <div class="config-item-card" data-item="packaging">
+              <div class="custom-checkbox">
+                <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="config-item-info">
+                <h4>Packaging Design</h4>
+                <p>Custom structural boxes, sleeves & unboxing</p>
+              </div>
+            </div>
+
+            <!-- 06: Swatch Card -->
+            <div class="config-item-card selected" data-item="swatch">
+              <div class="custom-checkbox">
+                <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="config-item-info">
+                <h4>Swatch Card</h4>
+                <p>Fabric, material & color variant swatches</p>
+              </div>
+            </div>
+
+            <!-- 07: Tags -->
+            <div class="config-item-card selected" data-item="tag">
+              <div class="custom-checkbox">
+                <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="config-item-info">
+                <h4>Product Tags</h4>
+                <p>Die-cut apparel tags & barcode labeling</p>
+              </div>
+            </div>
+
+            <!-- 08: Flex Banner -->
+            <div class="config-item-card" data-item="banner">
+              <div class="custom-checkbox">
+                <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="config-item-info">
+                <h4>Flex Banner</h4>
+                <p>Physical exhibition & showroom signage</p>
+              </div>
+            </div>
+
+            <!-- 09: Website -->
+            <div class="config-item-card selected" data-item="website">
+              <div class="custom-checkbox">
+                <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="config-item-info">
+                <h4>Website Design</h4>
+                <p>Responsive custom digital flagship</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Summary Dock -->
+        <div class="config-summary-dock">
+          <div>
+            <div class="dock-header">
+              <span class="dock-badge">Live System Overview</span>
+              <h3>YOUR BRAND SYSTEM</h3>
+            </div>
+
+            <div class="dock-pillars-preview">
+              <div class="dock-pillar-row active" data-pillar="identity">
+                <span>Identity Foundation</span>
+                <span class="pillar-indicator">Active</span>
+              </div>
+              <div class="dock-pillar-row active" data-pillar="business">
+                <span>Business Presentation</span>
+                <span class="pillar-indicator">Active</span>
+              </div>
+              <div class="dock-pillar-row active" data-pillar="product">
+                <span>Product Touchpoints</span>
+                <span class="pillar-indicator">Active</span>
+              </div>
+              <div class="dock-pillar-row active" data-pillar="presence">
+                <span>Market & Digital Presence</span>
+                <span class="pillar-indicator">Active</span>
+              </div>
+            </div>
+
+            <div class="dock-counter-text" id="dockCounter">
+              <span>6</span> Items Selected
+            </div>
+          </div>
+
+          <button class="btn-start-my-brand" id="btnStartMyBrand">
+            START MY BRAND
+            <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         13. FINAL CTA & INQUIRY FORM
+         ========================================================================== -->
+    <section class="final-branding-cta" id="contact">
+      <div class="final-cta-backdrop">
+        <div class="final-cta-split">
+          <!-- Left: Big Editorial Typography -->
+          <div class="final-cta-copy">
+            <div class="editorial-badge" style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.2); color:#fff;">
+              <span class="dot" style="background:var(--accent-gold);"></span>
+              <span>Next Steps</span>
+            </div>
+
+            <h2>
+              YOU DON'T NEED<br>
+              MORE DESIGN.<br>
+              YOU NEED THE<br>
+              <span class="accent">RIGHT BRAND SYSTEM.</span>
+            </h2>
+
+            <p>
+              Tell us what you're building. We'll help you identify what your business actually needs and assemble a unified identity.
+            </p>
+
+            <div class="final-cta-buttons">
+              <a href="#inquiryBox" class="btn-cta-gold" onclick="document.getElementById('formName').focus();">
+                START YOUR BRAND JOURNEY
+                <svg viewBox="0 0 24 24" style="width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2.5;"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
+              </a>
+              <a href="mailto:design@futuremindstudio.com" class="btn-cta-ghost">
+                TALK TO FUTURE MIND STUDIO
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Pre-filled High-End Inquiry Form -->
+          <div class="final-inquiry-box" id="inquiryBox">
+            <h3>Start Your Project</h3>
+            <p class="inquiry-sub">Your configured brand system will be reviewed directly by our studio creative director.</p>
+
+            <!-- Dynamic System Capsule Preview -->
+            <div class="selected-system-capsule">
+              <span class="capsule-label">Configured Brand System</span>
+              <div class="capsule-items" id="capsuleItems">
+                Logo Design • Business Card • Company Profile • Product Catalog • Swatch Card • Product Tags • Custom Website
+              </div>
+            </div>
+
+            <form class="branding-dark-form" id="brandingInquiryForm">
+              <input type="hidden" id="inquirySystem" name="inquirySystem" value="">
+
+              <div class="form-group">
+                <input type="text" id="formName" required placeholder=" ">
+                <label for="formName">What should we call you?</label>
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="formEmail" required placeholder=" ">
+                <label for="formEmail">Where should we send our reply?</label>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="formBusiness" placeholder=" ">
+                <label for="formBusiness">What business or industry are you in?</label>
+              </div>
+
+              <div class="form-group">
+                <textarea id="formVision" rows="3" placeholder=" "></textarea>
+                <label for="formVision">Tell us about your brand vision or missing pieces...</label>
+              </div>
+
+              <button type="submit" class="btn-cta-gold" style="width:100%; justify-content:center;">
+                Send Brand Inquiry
+                <svg viewBox="0 0 24 24" style="width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2.5;"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER (Matches Future Mind Studio Design)
+         ========================================================================== -->
+    <footer class="footer-details" style="margin-top: 40px;">
+      <div class="footer-top">
+        <div class="logo">
+          <div class="logo-icon">
+            <img src="assets/logo-rectangle.png" alt="Future Mind Studio Logo">
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#work">Work</a>
+          <a href="branding.html">Branding</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#process">Process</a>
+          <a href="index.html#studio">Studio</a>
+          <a href="index.html#insights">Insights</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Future Mind Studio. Made with premium design logic. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter X" class="social-icon social-x">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://dribbble.com" target="_blank" aria-label="Dribbble" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.49-11.05 1-11.6 8.56"></path></svg>
+          </a>
+        </div>
+        <a href="#" class="btn-back-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+          Back to top ✦
+        </a>
+      </div>
+      
+      <!-- Giant outline text background -->
+      <div class="footer-outline-text">FUTURE MIND</div>
+    </footer>
+
+  </div>
+
+
+
+  <!-- STICKY MOBILE BOTTOM BAR -->
+  <div class="sticky-mobile-cta">
+    <div class="mobile-cta-info">
+      <span class="mobile-cta-title">What Does Your Brand Need?</span>
+      <span class="mobile-cta-sub">Interactive Brand Discovery</span>
+    </div>
+    <a href="#configurator" class="btn-mobile-config">
+      Build System
+      <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2.5;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+  </div>
+
+  <script src="branding.js"></script>
+</body>
+</html>

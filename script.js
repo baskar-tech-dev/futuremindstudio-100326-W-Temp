@@ -262,6 +262,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // MOUSE DRAG START
     el.addEventListener('mousedown', (e) => {
+      const arrowLink = e.target.closest('.card-arrow, a');
+      if (arrowLink) {
+        const href = arrowLink.getAttribute('href') || el.getAttribute('data-href');
+        if (href) {
+          window.location.href = href;
+          return;
+        }
+      }
+
       e.preventDefault();
       activeDragElement = el;
       
@@ -286,6 +295,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // TOUCH DRAG START (Native mobile feel)
     el.addEventListener('touchstart', (e) => {
       if (e.touches && e.touches.length > 0) {
+        const arrowLink = e.target.closest('.card-arrow, a');
+        if (arrowLink) {
+          const href = arrowLink.getAttribute('href') || el.getAttribute('data-href');
+          if (href) {
+            window.location.href = href;
+            return;
+          }
+        }
+
         // e.preventDefault() blocks browser viewport drag-scrolls while dragging card
         e.preventDefault();
         activeDragElement = el;
@@ -385,12 +403,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: false });
 
   // RESET DRAG FUNCTIONALITY (Unified)
-  const resetDragStates = () => {
+  const resetDragStates = (e) => {
     if (!activeDragElement) return;
     
-    activeDragElement.classList.remove('dragging');
+    // Calculate movement distance to differentiate drag vs click
+    const endX = (e && e.clientX !== undefined) ? e.clientX : (e && e.changedTouches && e.changedTouches[0] ? e.changedTouches[0].clientX : dragStartX);
+    const endY = (e && e.clientY !== undefined) ? e.clientY : (e && e.changedTouches && e.changedTouches[0] ? e.changedTouches[0].clientY : dragStartY);
+    const moveDist = Math.hypot(endX - dragStartX, endY - dragStartY);
     
-    const record = cardPhysics.find(c => c.element === activeDragElement);
+    const targetEl = activeDragElement;
+    targetEl.classList.remove('dragging');
+    
+    const record = cardPhysics.find(c => c.element === targetEl);
     if (record) {
       record.currentDriftX = 0;
       record.currentDriftY = 0;
@@ -410,6 +434,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     activeDragElement = null;
+
+    // If movement was minimal (< 8px), it's a click: navigate to link if present!
+    if (moveDist < 8) {
+      const href = targetEl.getAttribute('data-href') || (targetEl.id === 'cardBranding' ? 'branding.html' : null);
+      if (href) {
+        window.location.href = href;
+      }
+    }
   };
 
   document.addEventListener('mouseup', resetDragStates);
@@ -616,67 +648,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     8. STICKY HEADER SCROLL DETECTION
+     8 & 9. MOBILE MENU & CTA HANDLER (Header & drawer managed by header.js)
      ========================================================================== */
-  const headerEl = document.querySelector('header');
-  const handleScroll = () => {
-    if (window.scrollY > 20) {
-      headerEl.classList.add('scrolled');
-    } else {
-      headerEl.classList.remove('scrolled');
-    }
-  };
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Initial run on DOM load
-
-
-  /* ==========================================================================
-     9. MOBILE GLASS HAMBURGER NAV OVERLAY HANDLER
-     ========================================================================== */
-  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-  const mobileMenuClose = document.getElementById('mobileMenuClose');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-  const openMobileMenu = () => {
-    if (mobileMenuToggle) mobileMenuToggle.classList.add('active');
-    if (mobileMenuOverlay) mobileMenuOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Lock background scrolling
-  };
-
-  const closeMobileMenu = () => {
-    if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
-    if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('active');
-    document.body.style.overflow = ''; // Release background scroll lock
-  };
-
-  if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', () => {
-      if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
-        closeMobileMenu();
-      } else {
-        openMobileMenu();
-      }
-    });
-  }
-
-  if (mobileMenuClose) {
-    mobileMenuClose.addEventListener('click', closeMobileMenu);
-  }
-
-  // Auto-close mobile menu when clicking nav links
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      closeMobileMenu();
-    });
-  });
-
-  // Auto-close when clicking on the CTA inside the mobile menu
   const mobileLetCreate = document.getElementById('mobileLetCreate');
   if (mobileLetCreate) {
     mobileLetCreate.addEventListener('click', (e) => {
       e.preventDefault();
-      closeMobileMenu();
+      if (typeof window.closeMobileMenu === 'function') {
+        window.closeMobileMenu();
+      }
       if (typeof openOverlay === 'function') {
         openOverlay(); // Open the premium search overlay
       }

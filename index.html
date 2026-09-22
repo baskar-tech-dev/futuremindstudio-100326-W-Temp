@@ -30,31 +30,9 @@
 
   <div class="app-container">
     
-    <!-- HEADER -->
-    <header>
-      <a href="#" class="logo" id="logoLink">
-        <div class="logo-icon">
-          <img src="assets/logo-rectangle.png" alt="Future Mind Studio Logo">
-        </div>
-      </a>
-      <nav id="mainNav">
-        <a href="#work" id="navWork">Work</a>
-        <a href="#services" id="navServices">Services</a>
-        <a href="#process" id="navProcess">Process</a>
-        <a href="#studio" id="navStudio">Studio</a>
-        <a href="#insights" id="navInsights">Insights</a>
-        <a href="#contact" id="navContact">Contact</a>
-      </nav>
-      <a href="#contact" class="btn-header" id="btnLetCreate">
-        Let's Create
-        <svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
-      </a>
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </header>
+    <!-- SHARED GLOBAL HEADER & NAVIGATION -->
+    <div id="site-header-container"></div>
+    <script src="header.js"></script>
 
     <!-- HERO SECTION -->
     <main class="hero">
@@ -126,15 +104,15 @@
         <!-- Four Floating Glassmorphic Cards -->
         
         <!-- BRANDING -->
-        <div class="floating-card card-branding hover-draggable" id="cardBranding" style="left: -38.7892px;top: 26.3056px;">
+        <div class="floating-card card-branding hover-draggable" id="cardBranding" data-href="branding.html" style="left: -38.7892px;top: 26.3056px; cursor: pointer;" title="Explore Branding Discovery">
           <div class="card-icon">
             <svg viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .5 2.2 1.5 3.1.7.8 1.3 1.5 1.5 2.5h6z"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
           </div>
           <h3>Branding</h3>
           <p>Identity that stands out in a crowded market.</p>
-          <div class="card-arrow">
+          <a href="branding.html" class="card-arrow" aria-label="Explore Branding Discovery" title="Explore Branding Discovery">
             <svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
-          </div>
+          </a>
         </div>
 
         <!-- WEB DESIGN -->
@@ -311,6 +289,10 @@
             <li>Typography systems</li>
             <li>Creative Direction</li>
           </ul>
+          <a href="branding.html" style="display:inline-flex; align-items:center; gap:8px; margin-top:18px; color:var(--text-dark); font-weight:700; font-size:14px; text-decoration:none; border-bottom:1.5px solid var(--accent-gold); padding-bottom:2px;">
+            Discover What Your Brand Needs
+            <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:currentColor; stroke-width:2.5; fill:none;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
         
         <!-- Block 2: UI/UX Craftsmanship -->
@@ -529,7 +511,7 @@
           <h2>Let's build<br>something<br><span>unforgettable together.</span></h2>
           
           <div class="contact-info-list">
-            <a href="mailto:hello@futuremindstudio.com" class="contact-email">hello@futuremindstudio.com</a>
+            <a href="mailto:design@futuremindstudio.com" class="contact-email">design@futuremindstudio.com</a>
             
             <!-- <div class="contact-locations">
               <h4>Locations</h4>
@@ -598,6 +580,7 @@
           </div>
           <div class="footer-links">
             <a href="#work">Work</a>
+            <a href="branding.html">Branding ✦</a>
             <a href="#services">Services</a>
             <a href="#process">Process</a>
             <a href="#studio">Studio</a>
@@ -634,38 +617,7 @@
 
   </div>
 
-  <!-- MOBILE NAV OVERLAY -->
-  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu">
-      <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-    </button>
-    <nav class="mobile-nav-links">
-      <a href="#work" class="mobile-nav-link">Work</a>
-      <a href="#services" class="mobile-nav-link">Services</a>
-      <a href="#process" class="mobile-nav-link">Process</a>
-      <a href="#studio" class="mobile-nav-link">Studio</a>
-      <a href="#insights" class="mobile-nav-link">Insights</a>
-      <a href="#contact" class="mobile-nav-link">Contact</a>
-    </nav>
-    <a href="#contact" class="btn-primary mobile-menu-cta" id="mobileLetCreate">
-      Let's Create
-      <svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
-    </a>
-    <div class="mobile-socials">
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-      </a>
-      <a href="https://twitter.com" target="_blank" aria-label="Twitter X" class="social-icon social-x">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
-      </a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-      </a>
-      <a href="https://dribbble.com" target="_blank" aria-label="Dribbble" class="social-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.49-11.05 1-11.6 8.56"></path></svg>
-      </a>
-    </div>
-  </div>
+
 
   <!-- OVERLAY MODAL: DRAG & CLICK SERVICE EXPLORER -->
   <div class="explore-overlay" id="exploreOverlay">
