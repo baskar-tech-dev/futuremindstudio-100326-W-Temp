@@ -85,7 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
     clickables.forEach(el => {
       el.addEventListener('mouseenter', () => {
         document.body.classList.add('hover-clickable');
-        activeMagnetic = el;
+        if (!el.classList.contains('work-menu-item')) {
+          activeMagnetic = el;
+        }
       });
       
       el.addEventListener('mousemove', (e) => {
@@ -437,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // If movement was minimal (< 8px), it's a click: navigate to link if present!
     if (moveDist < 8) {
-      const href = targetEl.getAttribute('data-href') || (targetEl.id === 'cardBranding' ? 'branding.html' : null);
+      const href = targetEl.getAttribute('data-href');
       if (href) {
         window.location.href = href;
       }
@@ -664,17 +666,209 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     10. CUSTOM WORK CARD CURSOR HOVER TAGS
+     10. CURATED PORTFOLIO CATEGORY MEDIA SETS (REAL CLIENT ASSETS)
      ========================================================================== */
-  const workCards = document.querySelectorAll('.work-card');
-  workCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      document.body.classList.add('hover-work');
-    });
-    card.addEventListener('mouseleave', () => {
-      document.body.classList.remove('hover-work');
-    });
+  const curatedCategoryMedia = {
+    branding: {
+      title: "Branding & Identity",
+      gallery: [
+        { src: "assets/logo/xzilo_logo.jpeg", label: "Xzilo — Approved Brand Logo" },
+        { src: "assets/logo/vn_vogue.jpeg", label: "VN Vogue — Fashion Identity" },
+        { src: "assets/logo/ns_knit_fabs.jpeg", label: "NS Knit Fabs — Export Brand Mark" },
+        { src: "assets/card/business_card.jpeg", label: "Aurevon Apparel — Business Card" },
+        { src: "assets/card/letterpad.jpeg", label: "Aurevon Apparel — Letterhead" },
+        { src: "assets/card/VN VOGUE - BUSINESS CARD - APPROVED FILE_page-0001 (1).jpg", label: "VN Vogue — Business Card Suite" }
+      ]
+    },
+    packaging: {
+      title: "Packaging & Print",
+      gallery: [
+        { src: "assets/packaging/TRIFLEX - BOX PRINT FILE - 5 Designs  - 21.07.2026_page-0001.jpg", label: "TriFlex — Box Print File (Design 01)" },
+        { src: "assets/packaging/TRIFLEX - BOX PRINT FILE - 5 Designs  - 21.07.2026_page-0002.jpg", label: "TriFlex — Box Print File (Design 02)" },
+        { src: "assets/packaging/TRIFLEX - BOX PRINT FILE - 5 Designs  - 21.07.2026_page-0003.jpg", label: "TriFlex — Box Print File (Design 03)" },
+        { src: "assets/packaging/TRIFLEX - BOX PRINT FILE - 5 Designs  - 21.07.2026_page-0004.jpg", label: "TriFlex — Box Print File (Design 04)" },
+        { src: "assets/packaging/TRIFLEX - BOX PRINT FILE - 5 Designs  - 21.07.2026_page-0005.jpg", label: "TriFlex — Box Print File (Design 05)" },
+        { src: "assets/packaging/TRIFLEX - POLYBAG - PRINT FILE - 21.07.2026_page-0001.jpg", label: "TriFlex — Garment Polybag (Front/Back)" },
+        { src: "assets/packaging/TRIFLEX - POLYBAG - PRINT FILE - 21.07.2026_page-0002.jpg", label: "TriFlex — Activewear Polybag Spec" },
+        { src: "assets/tag/TRIFLEX - TAG - PRINT FILE - 21.07.2026_page-0001.jpg", label: "TriFlex — Garment Hangtag Spec Sheet" }
+      ]
+    },
+    marketing: {
+      title: "Marketing Design",
+      gallery: [
+        { src: "assets/marketting/board.jpeg", label: "Maya Sree Fashion — Hanging Promo Board" },
+        { src: "assets/marketting/banner-hero.jpeg", label: "Maya Sree Fashion — Campaign Banner" },
+        { src: "assets/marketting/banner -design.jpeg", label: "Maya Sree Fashion — Storefront Display" }
+      ]
+    },
+    ecommerce: {
+      title: "Websites & E-Commerce",
+      gallery: [
+        { src: "assets/MayaSreeFashion-E-commerce.png", label: "Maya Sree Fashion — E-Commerce Storefront" }
+      ]
+    },
+    software: {
+      title: "ERP & Software",
+      gallery: [
+        { src: "assets/MayaSree-Dashboard.png", label: "Maya Sree — Inventory & GST Dashboard" },
+        { src: "assets/project_app.png", label: "Enterprise Analytics & Operations Suite" }
+      ]
+    }
+  };
+
+  /* ==========================================================================
+     10. CURATED PORTFOLIO GRID CONTROLLER (ANIMATED MULTI-ASSET TRANSITIONS)
+     ========================================================================== */
+  const tier1Cards = document.querySelectorAll('.curated-cards-grid .curated-card');
+  tier1Cards.forEach((card, idx) => {
+    card.style.animationDelay = `${idx * 50}ms`;
+    card.classList.add('anim-enter');
   });
+
+  function initCuratedCardSlideshows() {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const categoryCards = document.querySelectorAll('.curated-cards-grid .curated-card[data-category]');
+
+    categoryCards.forEach((card, cardIdx) => {
+      const cat = card.getAttribute('data-category');
+      if (!cat || cat === 'cta') return;
+
+      const visual = card.querySelector('.curated-card-visual');
+      const catData = curatedCategoryMedia[cat];
+      if (!visual || !catData) return;
+
+      const items = (catData.gallery && catData.gallery.length)
+        ? catData.gallery
+        : [{ src: catData.image, label: catData.title }];
+
+      if (items.length <= 1) return;
+
+      // Preserve existing overlay shields cleanly above slide stack
+      const stack = document.createElement('div');
+      stack.className = 'curated-slide-stack';
+
+      const dotsWrap = document.createElement('div');
+      dotsWrap.className = 'curated-slide-dots';
+      dotsWrap.setAttribute('aria-label', `${catData.title} preview slides`);
+
+      const slides = [];
+      const dots = [];
+
+      items.forEach((item, i) => {
+        const slide = document.createElement('div');
+        slide.className = 'curated-slide' + (i === 0 ? ' is-active' : '');
+        if (item.src.includes('Dashboard') || item.src.includes('project_app')) {
+          slide.setAttribute('data-fit', 'cover');
+        }
+
+        const img = document.createElement('img');
+        img.src = item.src;
+        img.alt = item.label || catData.title;
+        img.draggable = false;
+        slide.appendChild(img);
+        stack.appendChild(slide);
+        slides.push(slide);
+
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'curated-slide-dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', item.label || `Slide ${i + 1}`);
+        dot.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          goToSlide(i);
+        });
+        dotsWrap.appendChild(dot);
+        dots.push(dot);
+      });
+
+      const fallbackImg = visual.querySelector(':scope > img');
+      if (fallbackImg) fallbackImg.remove();
+
+      visual.insertBefore(stack, visual.firstChild);
+      visual.appendChild(dotsWrap);
+
+      let activeIdx = 0;
+      let timerId = null;
+
+      function goToSlide(nextIdx) {
+        if (nextIdx === activeIdx || nextIdx < 0 || nextIdx >= slides.length) return;
+        const prevIdx = activeIdx;
+        slides.forEach((s) => s.classList.remove('is-leaving'));
+        slides[prevIdx].classList.remove('is-active');
+        slides[prevIdx].classList.add('is-leaving');
+        slides[nextIdx].classList.add('is-active');
+        dots[prevIdx].classList.remove('is-active');
+        dots[nextIdx].classList.add('is-active');
+        activeIdx = nextIdx;
+      }
+
+      function stepNext() {
+        goToSlide((activeIdx + 1) % slides.length);
+      }
+
+      function startAuto() {
+        if (prefersReduced || timerId) return;
+        const intervalMs = 2800 + (cardIdx * 350);
+        timerId = window.setInterval(stepNext, intervalMs);
+      }
+
+      function stopAuto() {
+        if (timerId) {
+          window.clearInterval(timerId);
+          timerId = null;
+        }
+      }
+
+      // Advance once immediately on hover so transition is tangible, then pause cleanly for inspection
+      card.addEventListener('mouseenter', () => {
+        stopAuto();
+        stepNext();
+      });
+      card.addEventListener('mouseleave', () => {
+        startAuto();
+      });
+
+
+
+      // Only cycle when near/inside viewport to save resources
+      if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) startAuto();
+            else stopAuto();
+          });
+        }, { threshold: 0.15 });
+        obs.observe(card);
+      } else {
+        startAuto();
+      }
+    });
+  }
+
+  initCuratedCardSlideshows();
+
+
+  // Apply cross-page selected Work category scroll/showcase from sessionStorage
+  try {
+    const savedWorkFilter = sessionStorage.getItem('fms_work_filter');
+    if (savedWorkFilter) {
+      sessionStorage.removeItem('fms_work_filter');
+      setTimeout(() => {
+        const targetEl = savedWorkFilter === 'all'
+          ? document.getElementById('work')
+          : (document.querySelector(`#curatedGrid .curated-card[data-category="${savedWorkFilter}"]`) || document.getElementById('work'));
+        if (targetEl) {
+          const header = document.querySelector('header');
+          const headerOffset = header ? header.offsetHeight : 80;
+          window.scrollTo({
+            top: targetEl.getBoundingClientRect().top + window.scrollY - headerOffset - 15,
+            behavior: 'smooth'
+          });
+        }
+      }, 250);
+    }
+  } catch (err) {}
 
   /* ==========================================================================
      11. BENTO BOX LIGHT COORDINATE TRACKING
@@ -727,7 +921,7 @@ document.addEventListener('DOMContentLoaded', () => {
      13. INTERSECTION OBSERVER FOR HIGH-END SCROLL REVEALS
      ========================================================================== */
   const revealElements = document.querySelectorAll(
-    '.work-card, .bento-box, .process-step, .insight-card, .studio-copy-container, .studio-cards-container, .contact-split, .section-title, .section-badge'
+    '.work-card, .bento-box, .process-step, .studio-copy-container, .studio-cards-container, .contact-split, .section-title, .section-badge'
   );
   
   const revealObserver = new IntersectionObserver((entries, observer) => {

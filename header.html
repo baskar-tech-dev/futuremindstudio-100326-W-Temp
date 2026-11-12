@@ -1,24 +1,27 @@
 <!-- ==========================================================================
      FUTURE MIND STUDIO — GLOBAL SHARED HEADER & NAVIGATION
-     This component is dynamically loaded across all pages via header.js
+     This component is dynamically mounted across all pages via header.js
      ========================================================================== -->
 <header id="siteHeader">
   <a href="index.html" class="logo" id="logoLink" aria-label="Future Mind Studio Home">
     <div class="logo-icon">
-      <img src="assets/logo-rectangle.png" alt="Future Mind Studio Logo">
+      <img src="assets/logo-rectangle.png" alt="Future Mind Studio Logo" draggable="false">
     </div>
   </a>
 
   <nav id="mainNav" aria-label="Main Navigation">
-    <a href="#work" id="navWork">Work</a>
-    <a href="#services" id="navServices">Services</a>
-    <a href="#process" id="navProcess">Process</a>
-    <a href="#studio" id="navStudio">Studio</a>
-    <a href="#insights" id="navInsights">Insights</a>
-    <a href="#contact" id="navContact">Contact</a>
+    <button type="button" class="nav-dialog-trigger" id="navWork" aria-haspopup="dialog" aria-expanded="false" aria-controls="workMenuDialog">
+      <span>Work</span>
+      <svg class="nav-caret" viewBox="0 0 12 12"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+    </button>
+    <a href="index.html#services" id="navServices">Services</a>
+    <a href="index.html#process" id="navProcess">Process</a>
+    <a href="index.html#studio" id="navStudio">Studio</a>
+    <a href="index.html#insights" id="navInsights">Insights</a>
+    <a href="index.html#contact" id="navContact">Contact</a>
   </nav>
 
-  <a href="#contact" class="btn-header" id="btnLetCreate">
+  <a href="index.html#contact" class="btn-header" id="btnLetCreate">
     Let's Create
     <svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
   </a>
@@ -30,22 +33,202 @@
   </button>
 </header>
 
+<!-- WORK MENU CHOOSER DIALOG BOX (Animated Visual Showcase) -->
+<div class="work-dialog-overlay" id="workMenuDialog" role="dialog" aria-modal="true" aria-labelledby="workDialogTitle" aria-hidden="true">
+  <div class="work-dialog-window" role="document">
+    <!-- Top Header -->
+    <div class="work-dialog-top">
+      <div class="work-dialog-heading-wrap">
+        <div class="dialog-badge">✦ OUR WORK / DIRECTORY</div>
+        <h3 id="workDialogTitle">Explore Creative Disciplines</h3>
+        <p>Hover or select any category to preview the visual system and jump straight into that showcase.</p>
+      </div>
+      <button type="button" class="work-dialog-close" id="workDialogClose" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <!-- Animated 2-Column Interactive Menu Showcase -->
+    <div class="work-showcase-layout">
+      <!-- Left: Staggered 01-05 Category Selector -->
+      <div class="work-menu-list" id="workMenuList" role="listbox" aria-label="Service Disciplines">
+        <a href="index.html#work" class="work-menu-item is-active" data-filter="branding" data-index="0" style="--item-delay: 0ms;">
+          <span class="work-item-num">01</span>
+          <div class="work-item-body">
+            <h4>Branding &amp; Identity</h4>
+            <p>Logo systems, typography &amp; visual guidelines</p>
+          </div>
+          <span class="work-item-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </a>
+
+        <a href="index.html#work" class="work-menu-item" data-filter="packaging" data-index="1" style="--item-delay: 55ms;">
+          <span class="work-item-num">02</span>
+          <div class="work-item-body">
+            <h4>Packaging &amp; Print</h4>
+            <p>3D box architecture, hangtags &amp; print specs</p>
+          </div>
+          <span class="work-item-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </a>
+
+        <a href="index.html#work" class="work-menu-item" data-filter="marketing" data-index="2" style="--item-delay: 110ms;">
+          <span class="work-item-num">03</span>
+          <div class="work-item-body">
+            <h4>Marketing Design</h4>
+            <p>Catalogues, editorial lookbooks &amp; campaign assets</p>
+          </div>
+          <span class="work-item-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </a>
+
+        <a href="index.html#work" class="work-menu-item" data-filter="ecommerce" data-index="3" style="--item-delay: 165ms;">
+          <span class="work-item-num">04</span>
+          <div class="work-item-body">
+            <h4>Websites &amp; E-Commerce</h4>
+            <p>Flagship online stores, responsive UX &amp; portals</p>
+          </div>
+          <span class="work-item-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </a>
+
+        <a href="index.html#work" class="work-menu-item" data-filter="software" data-index="4" style="--item-delay: 220ms;">
+          <span class="work-item-num">05</span>
+          <div class="work-item-body">
+            <h4>Enterprise ERP &amp; Software</h4>
+            <p>Multi-warehouse inventory, GST billing &amp; systems</p>
+          </div>
+          <span class="work-item-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Right: Live Animated Visual Preview Stage -->
+      <div class="work-preview-stage" id="workPreviewStage" data-anim="branding">
+        <div class="preview-ambient-grid" aria-hidden="true"></div>
+        <div class="preview-ambient-glow" aria-hidden="true"></div>
+
+        <div class="preview-stage-top">
+          <span class="preview-stage-tag" id="workPreviewTag">01 / IDENTITY</span>
+          <span class="preview-stage-pulse"><i class="pulse-dot"></i>LIVE PREVIEW</span>
+        </div>
+
+        <div class="work-preview-visual" id="workPreviewVisual">
+          <!-- Animated Category Motion Overlays -->
+          <div class="anim-layer anim-branding-layer" aria-hidden="true">
+            <svg class="anim-signature-svg" viewBox="0 0 320 90" fill="none">
+              <path d="M12 68 Q 95 14 168 48 T 306 24" stroke="#F4C400" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+            <div class="anim-floating-chip">✦ Identity Geometry</div>
+          </div>
+
+          <div class="anim-layer anim-packaging-layer" aria-hidden="true">
+            <div class="anim-foil-sheen"></div>
+            <div class="anim-floating-chip">3D Structural Die-Line</div>
+          </div>
+
+          <div class="anim-layer anim-marketing-layer" aria-hidden="true">
+            <div class="anim-editorial-lines">
+              <span></span><span></span>
+            </div>
+            <div class="anim-floating-chip">Campaign &amp; Lookbook Grid</div>
+          </div>
+
+          <div class="anim-layer anim-ecommerce-layer" aria-hidden="true">
+            <div class="anim-browser-chrome">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="anim-floating-chip">Responsive D2C Storefront</div>
+          </div>
+
+          <div class="anim-layer anim-software-layer" aria-hidden="true">
+            <div class="anim-erp-bars">
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <div class="anim-floating-chip">Real-Time ERP Telemetry</div>
+          </div>
+
+          <div class="preview-img-frame" id="workPreviewFrame">
+            <img src="assets/project_brand.jpeg" alt="Branding &amp; Identity Preview" id="workPreviewImg" draggable="false">
+            <div class="img-protection-layer" aria-hidden="true"></div>
+            <div class="watermark-shield watermark-shield--compact" aria-hidden="true"><span class="wm-icon">✦</span><span class="wm-text">Future Mind Studio</span></div>
+          </div>
+        </div>
+
+        <div class="work-preview-meta" id="workPreviewMeta">
+          <div class="preview-meta-copy">
+            <h4 id="workPreviewTitle">Build a Brand That Stands Out</h4>
+            <p id="workPreviewDesc">Aerodynamic logos, typography guidelines &amp; complete corporate stationery systems engineered for lasting recognition.</p>
+          </div>
+          <a href="index.html#work" class="btn-preview-explore" id="workPreviewCta" data-filter="branding">
+            <span>Explore Service</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- MOBILE NAVIGATION DRAWER OVERLAY -->
 <div class="mobile-menu-overlay" id="mobileMenuOverlay" aria-modal="true" role="dialog">
-  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu">
-    <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-  </button>
+  <!-- Top Bar inside drawer: Logo + Single Close Button -->
+  <div class="mobile-menu-header">
+    <a href="index.html" class="mobile-menu-logo" aria-label="Future Mind Studio Home">
+      <img src="assets/logo-rectangle.png" alt="Future Mind Studio Logo" draggable="false">
+    </a>
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
 
   <nav class="mobile-nav-links" aria-label="Mobile Navigation Links">
-    <a href="#work" class="mobile-nav-link">Work</a>
-    <a href="#services" class="mobile-nav-link">Services</a>
-    <a href="#process" class="mobile-nav-link">Process</a>
-    <a href="#studio" class="mobile-nav-link">Studio</a>
-    <a href="#insights" class="mobile-nav-link">Insights</a>
-    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <!-- Centered Work Item with Dropdown Accordion -->
+    <div class="mobile-nav-accordion" id="mobileWorkAccordion">
+      <button class="mobile-accordion-toggle" id="mobileWorkToggle" aria-expanded="false">
+        <span>Work</span>
+        <svg class="accordion-caret" viewBox="0 0 14 14" fill="none"><path d="M3 5.5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mobile-accordion-content" id="mobileWorkContent">
+        <a href="index.html#work" class="mobile-sub-link all-work-link">
+          <span class="sub-num">✦</span>
+          <span class="sub-text">All Projects &amp; Overview</span>
+        </a>
+        <a href="index.html#work" class="mobile-sub-link" data-filter-target="branding">
+          <span class="sub-num">01</span>
+          <span class="sub-text">Branding &amp; Identity</span>
+        </a>
+        <a href="index.html#work" class="mobile-sub-link" data-filter-target="packaging">
+          <span class="sub-num">02</span>
+          <span class="sub-text">Packaging &amp; Print</span>
+        </a>
+        <a href="index.html#work" class="mobile-sub-link" data-filter-target="marketing">
+          <span class="sub-num">03</span>
+          <span class="sub-text">Marketing Design</span>
+        </a>
+        <a href="index.html#work" class="mobile-sub-link" data-filter-target="ecommerce">
+          <span class="sub-num">04</span>
+          <span class="sub-text">Websites &amp; E-Commerce</span>
+        </a>
+        <a href="index.html#work" class="mobile-sub-link" data-filter-target="software">
+          <span class="sub-num">05</span>
+          <span class="sub-text">Enterprise ERP &amp; Software</span>
+        </a>
+      </div>
+    </div>
+    <a href="index.html#services" class="mobile-nav-link">Services</a>
+    <a href="index.html#process" class="mobile-nav-link">Process</a>
+    <a href="index.html#studio" class="mobile-nav-link">Studio</a>
+    <a href="index.html#insights" class="mobile-nav-link">Insights</a>
+    <a href="index.html#contact" class="mobile-nav-link">Contact</a>
   </nav>
 
-  <a href="#contact" class="btn-primary mobile-menu-cta" id="mobileLetCreate">
+  <a href="index.html#contact" class="btn-primary mobile-menu-cta" id="mobileLetCreate">
     Let's Create
     <svg viewBox="0 0 24 24"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
   </a>
